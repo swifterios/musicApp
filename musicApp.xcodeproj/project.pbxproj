@@ -85,10 +85,18 @@
 		EC7533AC26AE99AD00047D4C /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				EC7533AD26AEA16400047D4C /* NetworkManager */,
 				EC75339A26AE98B900047D4C /* ViewController.swift */,
 				EC75339C26AE98B900047D4C /* Main.storyboard */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		EC7533AD26AEA16400047D4C /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
