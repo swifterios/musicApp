@@ -8,7 +8,7 @@
 import Foundation
 
 struct File: Codable {
-    let embedded: Embedded?
+    let embedded: Embedded
     let name: String?
     let type: String?
     
@@ -21,7 +21,7 @@ struct File: Codable {
 
 struct Embedded: Codable {
     let sort: String?
-    let items: [Item]?
+    let items: [Item]
     let total: Int?
 }
 

@@ -32,7 +32,7 @@ class ApiService {
                 completion(result)
             } else {
                 print(error.debugDescription)
-                completion(File(embedded: nil, name: nil, type: nil))
+
             }
         }
         task.resume()
