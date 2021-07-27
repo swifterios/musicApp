@@ -10,7 +10,7 @@
 		EC05F98426AF12AC004DFF69 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC05F98326AF12AC004DFF69 /* File.swift */; };
 		EC75339726AE98B900047D4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC75339626AE98B900047D4C /* AppDelegate.swift */; };
 		EC75339926AE98B900047D4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC75339826AE98B900047D4C /* SceneDelegate.swift */; };
-		EC75339B26AE98B900047D4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC75339A26AE98B900047D4C /* ViewController.swift */; };
+		EC75339B26AE98B900047D4C /* MusicViewControllerswift in Sources */ = {isa = PBXBuildFile; fileRef = EC75339A26AE98B900047D4C /* MusicViewControllerswift */; };
 		EC75339E26AE98B900047D4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC75339C26AE98B900047D4C /* Main.storyboard */; };
 		EC7533A026AE98BB00047D4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC75339F26AE98BB00047D4C /* Assets.xcassets */; };
 		EC7533A326AE98BB00047D4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC7533A126AE98BB00047D4C /* LaunchScreen.storyboard */; };
@@ -22,7 +22,7 @@
 		EC75339326AE98B900047D4C /* musicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = musicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC75339626AE98B900047D4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC75339826AE98B900047D4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EC75339A26AE98B900047D4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC75339A26AE98B900047D4C /* MusicViewControllerswift */ = {isa = PBXFileReference; lastKnownFileType = text; path = MusicViewControllerswift; sourceTree = "<group>"; };
 		EC75339D26AE98B900047D4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC75339F26AE98BB00047D4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC7533A226AE98BB00047D4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				EC7533AD26AEA16400047D4C /* NetworkManager */,
-				EC75339A26AE98B900047D4C /* ViewController.swift */,
+				EC75339A26AE98B900047D4C /* MusicViewControllerswift */,
 				EC75339C26AE98B900047D4C /* Main.storyboard */,
 			);
 			path = Core;
@@ -185,7 +185,7 @@
 			files = (
 				EC05F98426AF12AC004DFF69 /* File.swift in Sources */,
 				EC7533B326AEEB8F00047D4C /* ApiService.swift in Sources */,
-				EC75339B26AE98B900047D4C /* ViewController.swift in Sources */,
+				EC75339B26AE98B900047D4C /* MusicViewControllerswift in Sources */,
 				EC75339726AE98B900047D4C /* AppDelegate.swift in Sources */,
 				EC75339926AE98B900047D4C /* SceneDelegate.swift in Sources */,
 			);
