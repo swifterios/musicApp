@@ -14,6 +14,7 @@ class MusicViewController: UIViewController, UITableViewDelegate, UITableViewDat
     //MARK: - Outlets
 
     @IBOutlet weak var musicTableView: UITableView!
+    @IBOutlet weak var musicTableViewCell: MusicTableViewCell!
     
     
     override func viewDidAppear(_ animated: Bool) {
@@ -44,6 +45,10 @@ class MusicViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
+    func updateProgressBar(progress: Float) {
+        musicTableViewCell.updateProgressBar(progress: progress)
+    }
+    
     
     //MARK: - TableView functions
     
@@ -64,10 +69,9 @@ class MusicViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     @IBAction func startDownload(_ sender: UIButton) {
         let url = URL(string: (filesData?.embedded.items[0].file!)!)
-        DownloadFile.shared.downloadFile(url: url!) { path, error in
-            print("File saved to \(path)")
+        DownloadFile.shared.downloadFile(url: url!) { result, error in
+            print(result)
         }
     }
-    
 }
 

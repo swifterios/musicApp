@@ -7,14 +7,17 @@
 
 import UIKit
 
-class MusicTableViewCell: UITableViewCell {
+class MusicTableViewCell: UITableViewCell, URLSessionDownloadDelegate {
 
     
+
     @IBOutlet weak var musicLabel: UILabel!
+    @IBOutlet weak var progressBar: UIProgressView!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
     }
 
@@ -22,6 +25,19 @@ class MusicTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func updateProgressBar(progress: Float) {
+        self.progressBar.setProgress(progress, animated: true)
+    }
+    
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
+        
+    }
+    
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
+        let progress = Float(totalBytesWritten) / Float(totalBytesWritten)
+        updateProgressBar(progress: progress)
     }
 
 }

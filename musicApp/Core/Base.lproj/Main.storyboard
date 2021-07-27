@@ -76,7 +76,7 @@
                                                         <action selector="startDownload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PrQ-OQ-Wg7"/>
                                                     </connections>
                                                 </button>
-                                                <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EaF-Dh-RQJ">
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EaF-Dh-RQJ">
                                                     <rect key="frame" x="10" y="101" width="394" height="4"/>
                                                     <color key="progressTintColor" systemColor="systemGreenColor"/>
                                                 </progressView>
@@ -96,6 +96,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="musicLabel" destination="LQG-JU-1Po" id="bas-gp-5TW"/>
+                                            <outlet property="progressBar" destination="EaF-Dh-RQJ" id="XCr-fB-CMw"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
