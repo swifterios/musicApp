@@ -58,5 +58,16 @@ class MusicViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         return cell
     }
+    
+    //MARK: - Actions
+    
+
+    @IBAction func startDownload(_ sender: UIButton) {
+        let url = URL(string: (filesData?.embedded.items[0].file!)!)
+        DownloadFile.shared.downloadFile(url: url!) { path, error in
+            print("File saved to \(path)")
+        }
+    }
+    
 }
 

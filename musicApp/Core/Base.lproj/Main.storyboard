@@ -72,8 +72,11 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ho9-ea-iC3">
                                                     <rect key="frame" x="10" y="41" width="394" height="50"/>
                                                     <state key="normal" title="Download"/>
+                                                    <connections>
+                                                        <action selector="startDownload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PrQ-OQ-Wg7"/>
+                                                    </connections>
                                                 </button>
-                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EaF-Dh-RQJ">
+                                                <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EaF-Dh-RQJ">
                                                     <rect key="frame" x="10" y="101" width="394" height="4"/>
                                                     <color key="progressTintColor" systemColor="systemGreenColor"/>
                                                 </progressView>
