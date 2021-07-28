@@ -57,11 +57,15 @@ class MusicViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = musicTableView.dequeueReusableCell(withIdentifier: "musicTableViewCell", for: indexPath) as! MusicTableViewCell
+        if let cell = musicTableView.dequeueReusableCell(withIdentifier: "musicTableViewCell", for: indexPath) as? MusicTableViewCell {
+            
+            cell.filesData = filesData
+            cell.updateCell(index: indexPath.row)
+            
+            return cell
+        }
         
-        cell.musicLabel.text = filesData?.embedded.items[indexPath.row].name
-        
-        return cell
+        return UITableViewCell()
     }
     
     //MARK: - Actions
@@ -70,7 +74,7 @@ class MusicViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBAction func startDownload(_ sender: UIButton) {
         let url = URL(string: (filesData?.embedded.items[0].file!)!)
         DownloadFile.shared.downloadFile(url: url!) { result, error in
-            print(result)
+            
         }
     }
 }

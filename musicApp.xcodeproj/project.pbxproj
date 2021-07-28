@@ -53,6 +53,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		EC05F98B26B14009004DFF69 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EC75339A26AE98B900047D4C /* MusicViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EC05F98D26B1402B004DFF69 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC05F98726AFEE63004DFF69 /* MusicTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		EC75338A26AE98B900047D4C = {
 			isa = PBXGroup;
 			children = (
@@ -102,8 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				EC7533AD26AEA16400047D4C /* NetworkManager */,
-				EC75339A26AE98B900047D4C /* MusicViewController.swift */,
-				EC05F98726AFEE63004DFF69 /* MusicTableViewCell.swift */,
+				EC05F98D26B1402B004DFF69 /* View */,
+				EC05F98B26B14009004DFF69 /* Controller */,
 				EC75339C26AE98B900047D4C /* Main.storyboard */,
 			);
 			path = Core;

@@ -10,7 +10,9 @@ import UIKit
 class MusicTableViewCell: UITableViewCell, URLSessionDownloadDelegate {
 
     
-
+    var filesData: File?
+    
+    //MARK: - Outlets
     @IBOutlet weak var musicLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
     
@@ -18,13 +20,15 @@ class MusicTableViewCell: UITableViewCell, URLSessionDownloadDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+    }
+    
+    func updateCell(index: Int) {
+        musicLabel.text = filesData?.embedded.items[index].name
     }
     
     func updateProgressBar(progress: Float) {
