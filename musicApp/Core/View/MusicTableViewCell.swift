@@ -7,19 +7,28 @@
 
 import UIKit
 
-class MusicTableViewCell: UITableViewCell, URLSessionDownloadDelegate {
-
+class MusicTableViewCell: UITableViewCell {
     
     var filesData: File?
+    var currentProgress: Float = 0.0 {
+        didSet {
+            self.progressBar.progress = currentProgress
+        }
+    }
     
     //MARK: - Outlets
     @IBOutlet weak var musicLabel: UILabel!
-    @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var progressBar: UIProgressView! {
+        didSet {
+            progressBar.setProgress(progressBar.progress, animated: true)
+        }
+    }
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        progressBar.progress = 0
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -27,21 +36,21 @@ class MusicTableViewCell: UITableViewCell, URLSessionDownloadDelegate {
 
     }
     
+    @IBAction func downloadFile(_ sender: UIButton) {
+        let url = URL(string: (filesData?.embedded.items[0].file!)!)
+        DownloadFile.shared.downloadFile(url: url!) { result, error in
+            print(result)
+        }
+    }
+    
+    
+    func updatePorgressView(progress: Float) {
+        if progressBar != nil {
+            self.progressBar.setProgress(progress, animated: true)
+        }
+    }
+    
     func updateCell(index: Int) {
         musicLabel.text = filesData?.embedded.items[index].name
     }
-    
-    func updateProgressBar(progress: Float) {
-        self.progressBar.setProgress(progress, animated: true)
-    }
-    
-    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
-        
-    }
-    
-    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
-        let progress = Float(totalBytesWritten) / Float(totalBytesWritten)
-        updateProgressBar(progress: progress)
-    }
-
 }

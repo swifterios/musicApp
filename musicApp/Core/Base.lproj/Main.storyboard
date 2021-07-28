@@ -12,7 +12,7 @@
         <!--Music View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MusicViewController" customModule="musicApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="MusicViewController" id="BYZ-38-t0r" customClass="MusicViewController" customModule="musicApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,7 +73,7 @@
                                                     <rect key="frame" x="10" y="41" width="394" height="50"/>
                                                     <state key="normal" title="Download"/>
                                                     <connections>
-                                                        <action selector="startDownload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PrQ-OQ-Wg7"/>
+                                                        <action selector="downloadFile:" destination="Uy1-PZ-LyC" eventType="touchUpInside" id="g9L-Je-gXc"/>
                                                     </connections>
                                                 </button>
                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EaF-Dh-RQJ">
